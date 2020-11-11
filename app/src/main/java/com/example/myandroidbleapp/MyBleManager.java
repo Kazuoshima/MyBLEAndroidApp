@@ -16,8 +16,8 @@ import no.nordicsemi.android.ble.PhyRequest;
 import no.nordicsemi.android.ble.data.Data;
 
 public class MyBleManager extends BleManager {
-    final static UUID SERVICE_UUID = UUID.fromString("0000180d-0000-1000-8000-00805f9b34fb");
-    final static UUID FIRST_CHAR   = UUID.fromString("00002a37-0000-1000-8000-00805f9b34fb");
+    final static UUID SERVICE_UUID = UUID.fromString("00003e01-0000-1000-8000-00805f9b34fb");
+    final static UUID FIRST_CHAR   = UUID.fromString("00003e03-0000-1000-8000-00805f9b34fb");
 
     private BluetoothGattCharacteristic firstCharacteristic;
 
@@ -35,7 +35,6 @@ public class MyBleManager extends BleManager {
         @Override
         public void onHeartRateChanged(@NonNull BluetoothDevice device, Data data) {
             Log.i("Callback", "onHeartRateChanged: " + data.getIntValue(Data.FORMAT_UINT16,0));
-            Log.i("Callback", "onHeartRateChanged: " + data.getIntValue(Data.FORMAT_UINT8,1));
         }
     };
 

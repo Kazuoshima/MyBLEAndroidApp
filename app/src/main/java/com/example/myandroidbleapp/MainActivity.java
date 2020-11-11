@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity implements ConnectionObserve
                     device = result.getDevice();
                     if(device.getName()!=null){
                         Log.d("DEVICE BLE", "name: " + device.getName());
-                        if(device.getName().equals("TP5_GRAW")) {
+                        if(device.getName().equals("NX4393_4E3F")) {
                             deviceAct = device;
-                            txtList.setText("TP5_GRAW found. Ready to connect");
+                            txtList.setText("NX4393_4E3F found. Ready to connect");
                         }
                     }
                     //

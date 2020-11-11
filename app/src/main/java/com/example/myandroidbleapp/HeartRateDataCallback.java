@@ -19,14 +19,6 @@ public abstract class HeartRateDataCallback implements ProfileDataCallback, Hear
             return;
         }
 
-        String res = "";
-
-        for(Byte byteValue : data.getValue()) {
-            res += String.format("%02x",byteValue);
-        }
-
-        Log.i("RFCOMM", "onDataReceived: " + res);
-
         onHeartRateChanged(device, data);
     }
 }
